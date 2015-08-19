@@ -1,0 +1,7 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> morphia 1.2.12
+    - edu.uci.ics -> crawler4j 4.1
+    
