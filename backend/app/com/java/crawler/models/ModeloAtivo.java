@@ -30,7 +30,7 @@ public class ModeloAtivo extends Model {
 
 		for (ModeloAtivo modeloAtivo : list) {					
 
-			Key<MarcaAtiva> key = ModeloAtivo.find("nome", modeloAtivo.nome).getKey();
+			Key<MarcaAtiva> key = MarcaAtiva.find("nome", modeloAtivo.nome).getKey();
 			
 			if (key == null) {	
 				modeloAtivo.marcaAtiva = marcaAtiva;

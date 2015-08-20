@@ -25,7 +25,7 @@ public class WebMotorsCrawlerJob extends Job {
 
 	public void doJob() {
 
-		WebMotorsCrawlerJobProcess.performCralwerProcess();
+		//WebMotorsCrawlerJobProcess.performCralwerProcess();
 			
 	}
 
