@@ -3,7 +3,18 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /                                       DefaultController.index
+
+#Crawler
+GET /anuncios/filtrar/{estadoCidade}/{estado}/{marca}/{modelo} 				CrawlerController.listarPorParametros
+
+#Estado/Cidade
+GET /estados																EstadoCidadeController.getEstados
+GET /cidades/{uf}															EstadoCidadeController.getCidadesPorEstado
+
+#Marca/Modelo
+GET /marcas																	MarcaModeloController.getMarcas
+GET /modelos/{marca}																MarcaModeloController.getModelosPorMarca
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
@@ -11,5 +22,3 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
-# Catch all
-*       /{controller}/{action}                  {controller}.{action}

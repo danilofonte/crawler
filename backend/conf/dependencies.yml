@@ -4,4 +4,6 @@ require:
     - play
     - play -> morphia 1.2.12
     - edu.uci.ics -> crawler4j 4.1
-    
+    - net.sf.flexjson -> flexjson 3.3
+    - org.jsoup -> jsoup 1.8.3
+    - org.apache.httpcomponents -> httpclient 4.4
