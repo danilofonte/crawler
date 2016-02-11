@@ -1,10 +1,6 @@
-import org.junit.*;
+import org.junit.Test;
 
-import com.java.crawler.models.*;
-
-import java.util.*;
-
-import play.test.*;
+import play.test.UnitTest;
 
 public class BasicTest extends UnitTest {
 

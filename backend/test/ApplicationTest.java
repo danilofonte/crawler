@@ -1,10 +1,7 @@
-import org.junit.*;
+import org.junit.Test;
 
-import com.java.crawler.models.*;
-
-import play.test.*;
-import play.mvc.*;
-import play.mvc.Http.*;
+import play.mvc.Http.Response;
+import play.test.FunctionalTest;
 
 public class ApplicationTest extends FunctionalTest {
 
