@@ -60,16 +60,15 @@ div.container(ng-controller="InicialCtrl")
 				div.col-md-4
 		div.col-md-9(ng-show="anuncios != null && anuncios.length > 0 && (anuncioEscolhido.nmVersao === undefined || anuncioEscolhido.nmVersao === null || anuncioEscolhido.nmVersao === '')")
 			div.row
-				div.col-md-4(ng-repeat="anuncio in anuncios | filter:nmVersaoFilter")
-					div.thumbnail
-						img.img-medium(ng-src="{{anuncio.imagemUrl}}", on-error-src="http://placehold.it/260x200")
-					div.caption
-						h4.pull-right(ng-show="anuncio.siteReferencia == OLX") {{anuncio.preco}}
-						h4.pull-right(ng-show="anuncio.siteReferencia == WEBMOTORS") R$ {{anuncio.preco}}
-						H4
-							a(ng-click="abrirAnuncio(anuncio)") {{anuncio.nmVersao}}
-						p Oferta 
-							b {{anuncio.siteReferencia}}
-
-
-
+				div(ng-repeat="anuncio in anuncios | filter:nmVersaoFilter")
+					div.clearfix(ng-if="$index % 3 == 0")					
+					div.col-md-4
+						div.thumbnail
+							img.img-medium(ng-src="{{anuncio.imagemUrl}}", on-error-src="http://placehold.it/260x200")
+						div.caption
+							h4.pull-right(ng-show="anuncio.siteReferencia == OLX") {{anuncio.preco}}
+							h4.pull-right(ng-show="anuncio.siteReferencia == WEBMOTORS") R$ {{anuncio.preco}}
+							H4
+								a(ng-click="abrirAnuncio(anuncio)") {{anuncio.nmVersao}}
+							p Oferta 
+								b {{anuncio.siteReferencia}}
